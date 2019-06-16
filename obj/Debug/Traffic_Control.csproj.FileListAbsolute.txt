@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\bin\Debug\Traffic_Control.exe.config
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\bin\Debug\Traffic_Control.exe
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\bin\Debug\Traffic_Control.pdb
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.exe
+C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.pdb
