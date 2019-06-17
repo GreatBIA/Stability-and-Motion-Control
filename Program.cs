@@ -28,6 +28,11 @@ namespace Traffic_Control
             return ((L1(fi) + L2(fi)) * Math.Pow(T, 2) / 2.0);
         }
 
+        public static double Learly(double fi, double T, double t)
+        {
+            return ((L1(fi) + L2(fi)) * (T - t));
+        }
+
 
         public static double Max(double x1, double x2, double x3, double x4, double y1, double y2, double T, double a)
         {
@@ -35,12 +40,12 @@ namespace Traffic_Control
             MaxList.Add(0.0);
             for (double fi = 0; fi <= 360; fi++)
             {
-                if (Ladditional(fi, T) >= 0)
+                if (Learly(fi, T, 0) >= 0)
                 {
                     var max1 = L(fi, x1, x2, x3, x4, y1, y2, T) - a * Ladditional(fi, T);
                     MaxList.Add(max1);
                 }
-                if (Ladditional(fi, T) < 0)
+                if (Learly(fi, T, 0) < 0)
                 {
                     var max2 = L(fi, x1, x2, x3, x4, y1, y2, T) + a * Ladditional(fi, T);
                     MaxList.Add(max2);

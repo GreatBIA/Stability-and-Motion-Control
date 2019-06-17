@@ -5,3 +5,10 @@ C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Co
 C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.exe
 C:\Users\Admin\source\repos\Traffic_Control\Traffic_Control\obj\Debug\Traffic_Control.pdb
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\bin\Debug\Traffic_Control.exe.config
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\bin\Debug\Traffic_Control.exe
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\bin\Debug\Traffic_Control.pdb
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\obj\Debug\Traffic_Control.csprojAssemblyReference.cache
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\obj\Debug\Traffic_Control.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\obj\Debug\Traffic_Control.exe
+D:\Рабочий стол\Projects\Stability-and-Motion-Control\obj\Debug\Traffic_Control.pdb
