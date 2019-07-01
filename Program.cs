@@ -4,69 +4,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Traffic_Control
+namespace Trafic_Control
 {
     class Program
     {
         public static double L1(double fi)
         {
-            return (Math.Cos(fi * Math.PI / 180));
+            return Math.Cos(fi * Math.PI / 180);
         }
 
         public static double L2(double fi)
         {
-            return (Math.Sin(fi * Math.PI / 180));
+            return Math.Sin(fi * Math.PI / 180);
         }
 
-        public static double L(double fi, double x1, double x2, double x3, double x4, double y1, double y2, double T)
+        public static double L(double fi, double x1, double x2, double n, double y1, double y2, double a)
         {
-            return (L1(fi) * (x1 + T * x3 - y1) + L2(fi) * (x2 + T * x4 - y2));
+            return L1(fi) * (Math.Cos(n) * x1 + Math.Sin(n) * x2 - y1) + L2(fi) * (Math.Cos(n) * x2 - Math.Sin(n) * x1 + y2);
         }
 
-        public static double Ladditional(double fi, double T)
+        public static double Ladditional(double fi, double n)
         {
-            return ((L1(fi) + L2(fi)) * Math.Pow(T, 2) / 2.0);
+            return (L1(fi) * Math.Sin(n) + L2(fi) * Math.Cos(n));
         }
 
-        public static double Learly(double fi, double T, double t)
-        {
-            return ((L1(fi) + L2(fi)) * (T - t));
-        }
-
-
-        public static double Max(double x1, double x2, double x3, double x4, double y1, double y2, double T, double a)
+        public static double Max(double x1, double x2, double n, double y1, double y2, double a)
         {
             List<double> MaxList = new List<double>();
             MaxList.Add(0.0);
             for (double fi = 0; fi <= 360; fi++)
             {
-                if (Learly(fi, T, 0) >= 0)
+                if (Ladditional(fi, n) >= 0)
                 {
-                    var max1 = L(fi, x1, x2, x3, x4, y1, y2, T) - a * Ladditional(fi, T);
+                    var max1 = L(fi, x1, x2, n, y1, y2, a) - a * Ladditional(fi, n);
                     MaxList.Add(max1);
                 }
-                if (Learly(fi, T, 0) < 0)
+                else
                 {
-                    var max2 = L(fi, x1, x2, x3, x4, y1, y2, T) + a * Ladditional(fi, T);
+                    var max2 = L(fi, x1, x2, n, y1, y2, a) + a * Ladditional(fi, n);
                     MaxList.Add(max2);
                 }
             }
-            var maxs = MaxList.Max();
-            return maxs;
+            return MaxList.Max();
+
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите x1 x2 x3 x4 y1 y2 T a");
+            Console.WriteLine("Введите x1 x2 ню y1 y2 а");
             double[] numbers = Array.ConvertAll(Console.ReadLine().Split(), double.Parse);
             var x1 = numbers[0];
             var x2 = numbers[1];
-            var x3 = numbers[2];
-            var x4 = numbers[3];
-            var y1 = numbers[4];
-            var y2 = numbers[5];
-            var T = numbers[6];
-            var a = numbers[7];
-            Console.WriteLine(Max(x1, x2, x3, x4, y1, y2, T, a));
+            var n = numbers[2];
+            var y1 = numbers[3];
+            var y2 = numbers[4];
+            var a = numbers[5];
+            Console.WriteLine(Max(x1, x2, n, y1, y2, a));
         }
     }
 }
